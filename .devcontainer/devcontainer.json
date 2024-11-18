@@ -1,0 +1,25 @@
+{
+	"name": "WaSR-T",
+	"build": { "dockerfile": "Dockerfile" },
+	"runArgs": [
+		"--net", "host",
+		"--privileged",
+		"--gpus", "all",
+		"--shm-size", "16g"
+  	],
+	"containerEnv": {
+        "DISPLAY": "${localEnv:DISPLAY}"
+    },
+	"mounts": [
+        "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-vscode.cpptools-extension-pack"
+			]
+		}
+	},
+	"postCreateCommand": "pip install -r /workspaces/WaSR-T/requirements.txt"
+}
