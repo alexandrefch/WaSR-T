@@ -36,6 +36,14 @@ The required Python libraries can be installed using the following pip command
 pip install -r requirements.txt
 ```
 
+<details> 
+  <summary> :whale: <b>Docker</b> </summary>
+
+   To use Docker along GPU, you might need to install [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
+   Now using [devcontainers extension](https://code.visualstudio.com/docs/devcontainers/tutorial) for vscode, you will be able to open the project automaticly in a Docker container.
+</details>
+
+
 ## Usage
 
 The WaSR-T model used in our experiments (ResNet-101 backbone) can be initialized with the following code.
